@@ -1,3 +1,4 @@
+=begin
 10.times do |blob_item|
   Blog.create!(
       title:"My Blog #{blob_item}",
@@ -8,3 +9,4 @@ end
 5.times do |skill|
   Skill
 end
+=end
