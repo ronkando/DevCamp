@@ -1,0 +1,7 @@
+<h1>Home Page</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+<%= @posts.inspect %>
+<% @posts.each do |blog|%>
+  <%= render 'one_post', blog: blog, blabla: blog%>
+
+<% end %>
