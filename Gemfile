@@ -55,4 +55,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'wannabe_bool'
+gem 'friendly_id', '~> 5.2.4'
 
