@@ -6,5 +6,5 @@ class Blog < ApplicationRecord
   def self.my_all
     all
   end
-
+ validates_presence_of :tile , :body
 end
