@@ -15,11 +15,6 @@ ActiveRecord::Schema.define(version: 2019_07_23_100211) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "aaaa", id: false, force: :cascade do |t|
-  end
-
-  create_table "bbb", id: false, force: :cascade do |t|
-  end
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
