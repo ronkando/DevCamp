@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggl_status]
 
   # GET /blogs
   # GET /blogs.json
@@ -20,6 +20,17 @@ class BlogsController < ApplicationController
     Rails.logger.info @blog.inspect
   end
 
+def toggl_status
+
+   if @blog.draft?
+     @blog.published!
+      elsif @blog.published?
+     @blog.draft!
+     end
+
+  redirect_to blog_path, notice: 'Post has been updated'
+
+end
   # GET /blogs/1/edit
   def edit
   end
@@ -67,11 +78,12 @@ class BlogsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def   set_blog
-      @blog = Blog.find(params[:id])
+      @blog = Blog.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
       params.require(:blog).permit(:title, :body)
     end
+
 end
