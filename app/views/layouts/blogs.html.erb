@@ -22,7 +22,7 @@
   <%= link_to "Login" , user_session_path %>
 <% end %>
 <%= yield %>
-<%= render 'shared/nav_bar' %>
+<%= render 'shared/nav_bar' , location: "bottom"%>
 <hr>
 <%#= session[:source].inspect %>
 <% if  session[:source] %>
