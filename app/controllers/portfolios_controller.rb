@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  layout "portfolio"
   def index
     @portfolio_items = Portfolio.all
     # @portfolio_items = Portfolio.ruby_on_rails_portfoio_items
@@ -10,6 +11,7 @@ class PortfoliosController < ApplicationController
 
   def show
     @portfolio_item = Portfolio.find(params[:id])
+
   end
   def create
   @portfolio_item =  Portfolio.new(portfolio_params)

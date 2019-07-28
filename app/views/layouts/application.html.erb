@@ -14,27 +14,11 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-  <div>
-    <div><%= link_to "Home" , root_path %></div>
-    <div><%= link_to "About" , about_path %></div>
-    <div><%= link_to "Contact" , contact_path %></div>
-    <div><%= link_to "Blog" , blogs_path %></div>
-    <div><%= link_to "Portfolio" , portfolios_path %></div>
+  <%= render 'shared/nav_bar' , location: "top"%>
+   <%= login_helper %>
 
-  </div>
-
-  <% if current_user.is_a?(User) %>
-     <%= link_to "Logout" , destroy_user_session_path , method: :delete %>
-    <% else %>
-      <%= link_to "Register" , new_user_registration_path %>
-      <%= link_to "Login" , user_session_path %>
-    <% end %>
     <%= yield %>
     <hr>
-    <%#= session[:source].inspect %>
-    <% if  session[:source] %>
-    <h3> Thank you visiting me from </h3>
-    <%= session[:source] %>
-    <% end %>
+  <%= source_helper("application")%>
   </body>
 </html>
