@@ -13,4 +13,8 @@ class Blog < ApplicationRecord
     all
   end
 
+  def self.get_with_limit
+    limit(2)
+  end
+
 end
