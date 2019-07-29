@@ -58,4 +58,5 @@ gem 'wannabe_bool'
 gem 'friendly_id', '~> 5.2.4'
 
 gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'petergate', '~> 2.0', '>= 2.0.1'
 
