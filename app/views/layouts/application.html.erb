@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title><%= @page_title %>x</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="<%=  @seo_keywords %>" />
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -18,7 +21,7 @@
    <%= login_helper %>
 
     <%= yield %>
-    <hr>
+
   <%= source_helper("application")%>
   <%= @copyright %>
   </body>

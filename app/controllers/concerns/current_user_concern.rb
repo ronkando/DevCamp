@@ -15,5 +15,5 @@ module CurrentUserConcern
       guest.email      = "guest@example.com"
       guest
     end
-  end
+    end
 end
