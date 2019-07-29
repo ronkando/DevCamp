@@ -1,10 +1,20 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggl_status]
+  layout "blogs"
 
   # GET /blogs
   # GET /blogs.json
   def index
+    # binding.pry
     @blogs = Blog.all
+    # binding.pry
+    # @blogs = Blog.get_with_limit
+    # binding.pry
+      #byebug
+    # puts "*" * 100
+    # puts @blogs.inspect
+    # puts "*" * 100
+
     @page_title = "Blog Page"
   end
 
