@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
     # puts @blogs.inspect
     # puts "*" * 100
 
-    @page_title = "Blog Page"
+    # @page_title = "Blog Page"
   end
 
   # GET /blogs/1
