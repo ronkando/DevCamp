@@ -11,18 +11,35 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
   </head>
 
-  <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <body class="text-center">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-  <%= render 'shared/nav_bar' , location: "top"%>
+  <%= render 'shared/application_navbar' %>
    <%= login_helper %>
 
     <%= yield %>
 
-  <%= source_helper("application")%>
-  <%= @copyright %>
+  <%#= source_helper("application")%>
+  <%#= @copyright %>
+  </div>
   </body>
 </html>
