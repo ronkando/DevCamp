@@ -1,7 +1,7 @@
 @import "bootstrap";
 //@import "bootstrap-sprockets";
 //@import "font-awesome-sprockets";
-//@import "font-awesome";
+@import "font-awesome";
 
 /*
  * Globals
@@ -168,4 +168,11 @@ h6, .h6 {
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+
+/*
+ * custom styles
+ */
+.social-links li{
+  font-size: 1.75em;
 }

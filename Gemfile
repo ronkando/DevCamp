@@ -67,6 +67,8 @@ gem 'devise', '~> 4.6', '>= 4.6.2'
 # gem 'gem', git: 'https://github.com/ronkando/gem'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'jquery-rails'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 
 

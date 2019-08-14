@@ -7,7 +7,7 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     # binding.pry
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(3)
     # binding.pry
     # @blogs = Blog.get_with_limit
     # binding.pry
