@@ -6,22 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <meta name="keywords" content="<%=  @seo_keywords %>" />
+  <meta name="keywords" content="<%= @seo_keywords %>"/>
 
-  <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
 
-    <%=  render 'shared/portfolio_navbar'%>
-    <%=  render 'shared/portfolio_masthead'%>
+    <%= render 'shared/portfolio_navbar' %>
+    <%= render 'shared/portfolio_masthead' %>
 
 
-<%= yield %>
-    <%=  render 'shared/portfolio_footer'%>
+  <%= yield %>
+  <%= render 'shared/portfolio_footer' %>
 <hr>
 <%#= session[:source].inspect %>
-  <%= source_helper("portfolio") %>
+<%= source_helper("portfolio") %>
 </body>
 </html>
