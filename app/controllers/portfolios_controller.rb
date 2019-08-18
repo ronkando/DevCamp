@@ -6,6 +6,12 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.by_position
     # @portfolio_items = Portfolio.ruby_on_rails_portfoio_items
   end
+  def sort
+  params[:order].each do |key , value|
+    Portfolio.find(value[:id]).update(position: value[:position])
+  end
+    render nothing: true
+  end
 
   def new
     @portfolio_item = Portfolio.new
