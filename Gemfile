@@ -63,7 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'wannabe_bool'
 gem 'friendly_id', '~> 5.2.4'
 
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 # gem 'gem', git: 'https://github.com/ronkando/gem'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'jquery-rails'
